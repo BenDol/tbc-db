@@ -8033,8 +8033,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('142607','1426','7','0','100','0','0','0','0','0','0','0','22','0','0','0','0','0','0','0','0','0','0','0','Riverpaw Miner - Set Phase 0 on Evade'),
 -- Defias Worker (2.4.3 Official Data)
 ('172701','1727','2','0','100','0','15','0','0','0','0','0','25','0','0','0','1','-47','0','0','0','0','0','0','Defias Worker - Flee at 15% HP'),
--- Living Flame (2.4.3 Official Data)
-('341701','3417','0','0','100','1','500','500','2700','8900','0','0','11','5113','0','0','0','0','0','0','0','0','0','0','Living Flame - Cast Living Flames'),
+-- Living Flame 3417
+('341701','3417','11','0','100','0','0','0','0','0','0','0','11','5111','0','34','0','0','0','0','0','0','0','0','Living Flame - Cast Living Flame Passive on Spawn'),
 -- Defias Raider (2.4.3 Official Data)
 ('618001','6180','1','0','100','0','1000','1000','0','0','0','0','11','7165','0','32','0','0','0','0','0','0','0','0','Defias Raider - Cast Battle Stance OOC'),
 ('618002','6180','0','0','100','1','5000','7500','12500','15000','0','0','11','25710','1','0','0','0','0','0','0','0','0','0','Defias Raider - Cast Heroic Strike'),
@@ -11302,7 +11302,7 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 -- Muckshell Clacker
 ('440101','4401','9','0','100','1','0','5','20000','25000','0','0','11','3604','1','0','0','0','0','0','0','0','0','0','Muckshell Clacker - Cast Tendon Rip'),
 -- Muckshell Snapclaw 4402
-('440201','4402','9','0','100','1','0','5','5000','7000','0','0','11','25645','1','0','0','0','0','0','0','0','0','0','Muckshell Snapclaw - Cast Poison'),
+('440201','4402','11','0','100','0','0','0','0','0','0','0','11','3616','0','34','0','0','0','0','0','0','0','0','Muckshell Snapclaw - Cast Poison Proc on Spawn'),
 -- Muckshell Pincer (4403) - NSR
 -- Muckshell Scrabbler 4404
 ('440401','4404','4','0','100','0','0','0','0','0','0','0','57','2','35','0','0','0','0','0','0','0','0','0','Muckshell Scrabbler - Enable Range Mode on Aggro'),
@@ -18722,6 +18722,8 @@ INSERT INTO `creature_ai_scripts` (`id`,`creature_id`,`event_type`,`event_invers
 ('2077802','20778','8','0','100','0','35686','-1','0','0','0','0','36','20805','-1','0','0','0','0','0','0','0','0','0','Void Waste - Change Entry after (proc) Spell 35686'),
 -- Congealed Void Horror 20779
 -- Kaylaan 20780
+('2078001','20780','1','2','100','1','44000','73000','44000','73000','0','0','11','35746','0','0','1','-11185','-11186','-11187','22','1','0','0','Kaylaan - Cast Resurrection and Random Say and Set Phase 1 OOC (Phase 0)'),
+('2078002','20780','1','1','100','1','17000','17000','17000','17000','0','0','1','-11188','-11189','0','22','0','0','0','0','0','0','0','Kaylaan - Random Say and Set Phase 0 OOC (Phase 1)'),
 -- Porfus the Gem Gorger 20783 - 20520 should morph entry
 -- Armbreaker Huffaz 20784 - 20520 should morph entry
 -- Fel Tinkerer Zortan 20785 - 20520 should morph entry
@@ -32174,6 +32176,11 @@ INSERT INTO `creature_ai_texts` (`entry`,`content_default`,`sound`,`type`,`langu
 ('-11182','%s departs from the world and summons shades to do his bidding.','0','2','0','20445','0'),
 ('-11183','%s calls for a nearby slave to assist him!','0','2','0','18089/20088','0'),
 ('-11184','%s discards his weapons and reaches for a polearm!','0','2','0','18046','0'),
+('-11185','Do not die on me, vindicator!','0','0','0','20780','0'),
+('-11186','Light! Do not fail me!','0','0','0','20780','0'),
+('-11187','Kael\'thas and the Legion... just what we needed!','0','0','0','20780','0'),
+('-11188','I\'ve failed. The Light has abandoned me.','0','0','0','20780','0'),
+('-11189','It is hopeless... I\'ve done all I can.','0','0','0','20780','0'),
 ('-19997','May the light bless you.','0','0','0','25639','1'),
 ('-19998','Your wounds are severe, but you will live.','0','0','0','25639','1'),
 ('-19999','Rest now, you have fought well today.','0','0','0','25639','1');
