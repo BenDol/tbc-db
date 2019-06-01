@@ -1,0 +1,1 @@
+UPDATE creature_template Set Faction = 1812 WHERE Entry = 23191;
